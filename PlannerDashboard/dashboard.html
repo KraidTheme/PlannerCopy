@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estile.css">
+    <link rel="stylesheet" href="icomoon/style.css">
+    <title>Sistemas - Planner</title>
+</head>
+<body>
+    <header class="header-top">
+        <div class="left-header-group">
+            <i class="icon-grid"></i>
+            <a class="a-link" href="#">Planner</a>
+        </div>
+        <div class="right-header-group">
+            <div class="round-username-icon">AG</div>
+        </div> 
+    </header>
+    <aside class="aside-bar" id="sideBar" onclick="showSideBar()">
+        <i class="icon-eye"></i>
+        <i class="icon-plus"></i>
+        <i class="icon-refresh"></i>
+        <i class="icon-user"></i>
+    </aside>
+    <section class="content" id="contentPanel">
+        <div class="queu-tasks">
+            <div class="tittle-container">
+                <h3>Por hacer</h3>
+                <i class="icon-plus" id="addTarea" onclick="showAddTarea()"> Agregar tarea</i>
+            </div>
+            <div class="create-new-task" id="containerNewTask">
+                <input type="radio">
+                <input type="text" class="tbx-text" id="tbxNombre" placeholder="Escriba un nombre para tarea">
+                <i class="icon-calendar"> Establecer fecha de vencimiento</i>
+                <i class="icon-user" id="iconUser"> Asignar</i>
+                <span class="btn-add-task" onclick="insertTask()" >Agregar tarea</span>
+        </div>
+        <div class="body-content-tasks" id="tasksContainer">
+            <div class="completed-content-tasks">
+
+            </div>
+        </div>
+        </div>
+        <section class="completed-tasks-container">
+            <a class="btn-completed-task" onclick="showCompleted()" id="btnCompleted">Mostrar tareas completas ↓</a>
+            <div class="body-content-tasks" id="containerCompleted">
+
+            </div>
+        </section>
+    </section>
+    <script src="js/function.js"></script>
+</body>
+</html>
